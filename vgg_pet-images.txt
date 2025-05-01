@@ -1,5 +1,3 @@
-*********************** PRNTING FINAL RESULTS CONSILIDATED END ****************************** 
-
 Command Line Arguments:
      dir = pet_images/ 
     arch = vgg 
@@ -318,16 +316,11 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
-*********************** PRNTING RESULTS FROM EACH MODEL START ****************************** 
+*********************** START --- PRNTING RESULTS FOR MODEL:  vgg  --- START ****************************** 
 
--------- The follow stats are for model :  vgg  -----------------
 Number of images :  40
-Number of correct dogs :  30
 Number of dogs img :  30
-Number of correct notdogs :  10
 Number of notdogs img :  10
-Number of correct breed :  28
-Number of labels :  35
 % correct dogs :  100.0
 % correct notdogs :  100.0
 % correct breed :  93.33
@@ -335,30 +328,8 @@ Number of labels :  35
 -------- Printng misclassified breed -----------------
 great pyrenees ,  kuvasz
 beagle ,  walker hound, walker foxhound
-*********************** PRNTING RESULTS FROM EACH MODEL End ****************************** 
 
-*********************** PRNTING FINAL RESULTS CONSILIDATED START ****************************** 
-
-
- RESULTS TABLE 
-
-------------------------------
-|       # Total Images |  40 |
-------------------------------
-|         # Dog Images |  30 |
-------------------------------
-|   # Not-a-Dog Images |  10 |
-------------------------------
+*********************** END --- PRNTING RESULTS FOR MODEL:  vgg  --- END ****************************** 
 
 
-------------------------------------------------------------------------------------------------------
-|CNN Model Architecture | % Not-a-Dog Correct | % Dogs Correct   | % Breeds Correct | % Match Labels |
-------------------------------------------------------------------------------------------------------
-|                Resnet |               90.0% |           100%   |              90% |          82.5% |
-------------------------------------------------------------------------------------------------------
-|               Alexnet |              100.0% |           100%   |              80% |            75% |
-------------------------------------------------------------------------------------------------------
-|                   VGG |              100.0% |           100%   |           93.33% |          87.5% |
-------------------------------------------------------------------------------------------------------
-
-** Total Elapsed Runtime: 0:0:48
+** Total Elapsed Runtime: 0:0:52

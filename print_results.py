@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Sudip Dey
 # DATE CREATED: 27-Apr-25
-# REVISED DATE: 
+# REVISED DATE: 01-May-25
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
 #          should also allow the user to be able to print out cases of misclassified
@@ -63,11 +63,11 @@ def print_results(results_dic, results_stats_dic, model,
            None - simply printing results.
     """    
 
-    print('*********************** PRNTING RESULTS FROM EACH MODEL START ****************************** \n')
-
-    print('-------- The follow stats are for model : ', model, ' -----------------')
+    print('*********************** START --- PRNTING RESULTS FOR MODEL: ', model, ' --- START ****************************** \n')
 
     for key, value in results_stats_dic.items():
+        if key in ('n_correct_dogs', 'n_correct_notdogs', 'n_correct_breed', 'n_labels'):
+                continue
         key_list = key.split('_')
         if key_list[0] == 'n':
                 key_list[0] = 'Number of'
@@ -88,34 +88,5 @@ def print_results(results_dic, results_stats_dic, model,
                 if sum(value[3:])==2 and value[2]==0:
                         print (value[0],', ',value[1])
 
+    print('\n*********************** END --- PRNTING RESULTS FOR MODEL: ', model, ' --- END ****************************** \n')
 
-    print('*********************** PRNTING RESULTS FROM EACH MODEL End ****************************** \n')
-
-
-    print('*********************** PRNTING FINAL RESULTS CONSILIDATED START ****************************** \n')
-
-
-    print("\n RESULTS TABLE \n")
-    print('------------------------------')
-    print('|       # Total Images |  40 |')
-    print('------------------------------')
-    print('|         # Dog Images |  30 |')
-    print('------------------------------')
-    print('|   # Not-a-Dog Images |  10 |')
-    print('------------------------------')
-
-    print('\n')
-    print('------------------------------------------------------------------------------------------------------')
-    print('|CNN Model Architecture | % Not-a-Dog Correct | % Dogs Correct   | % Breeds Correct | % Match Labels |')
-    print('------------------------------------------------------------------------------------------------------')
-    print('|                Resnet |               90.0% |           100%   |              90% |          82.5% |')
-    print('------------------------------------------------------------------------------------------------------')
-    print('|               Alexnet |              100.0% |           100%   |              80% |            75% |')
-    print('------------------------------------------------------------------------------------------------------')
-    print('|                   VGG |              100.0% |           100%   |           93.33% |          87.5% |')
-    print('------------------------------------------------------------------------------------------------------')
-
-print('*********************** PRNTING FINAL RESULTS CONSILIDATED END ****************************** \n')
-
-    
-                

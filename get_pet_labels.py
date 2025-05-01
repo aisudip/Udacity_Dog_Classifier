@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Sudip Dey
 # DATE CREATED: 23-Apr-2025                                 
-# REVISED DATE: 
+# REVISED DATE: 01-May-2025
 # PURPOSE: Create the function get_pet_labels that creates the pet labels from 
 #          the image's filename. This function inputs: 
 #           - The Image Folder as image_dir within get_pet_labels function and 
@@ -44,6 +44,8 @@ def get_pet_labels(image_dir):
     results_dic = dict()
     filenames_list = listdir(image_dir)
     for name in filenames_list:
+      if name[0]=='.':
+        continue
       petname_list =[]
       petname_str =""
       splitname = name.lower().split('_')
